@@ -1,0 +1,181 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InvalidShortString",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "str",
+						"type": "string"
+					}
+				],
+				"name": "StringTooLong",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "EIP712DomainChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "eip712Domain",
+				"outputs": [
+					{
+						"internalType": "bytes1",
+						"name": "fields",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "version",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "chainId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "verifyingContract",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "extensions",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:oz-upgrades-unsafe-allow": "state-variable-immutable",
+			"details": "https://eips.ethereum.org/EIPS/eip-712[EIP 712] is a standard for hashing and signing of typed structured data. The encoding scheme specified in the EIP requires a domain separator and a hash of the typed structured data, whose encoding is very generic and therefore its implementation in Solidity is not feasible, thus this contract does not implement the encoding itself. Protocols need to implement the type-specific encoding they need in order to produce the hash of their typed data using a combination of `abi.encode` and `keccak256`. This contract implements the EIP 712 domain separator ({_domainSeparatorV4}) that is used as part of the encoding scheme, and the final step of the encoding to obtain the message digest that is then signed via ECDSA ({_hashTypedDataV4}). The implementation of the domain separator was designed to be as efficient as possible while still properly updating the chain id to protect against replay attacks on an eventual fork of the chain. NOTE: This contract implements the version of the encoding known as \"v4\", as implemented by the JSON RPC method https://docs.metamask.io/guide/signing-data.html[`eth_signTypedDataV4` in MetaMask]. NOTE: In the upgradeable version of this contract, the cached values will correspond to the address, and the domain separator of the implementation contract. This will cause the {_domainSeparatorV4} function to always rebuild the separator from the immutable values, which is cheaper than accessing a cached version in cold storage.",
+			"events": {
+				"EIP712DomainChanged()": {
+					"details": "MAY be emitted to signal that the domain could have changed."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Initializes the domain separator and parameter caches. The meaning of `name` and `version` is specified in https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator[EIP 712]: - `name`: the user readable name of the signing domain, i.e. the name of the DApp or the protocol. - `version`: the current major version of the signing domain. NOTE: These parameters cannot be changed except through a xref:learn::upgrading-smart-contracts.adoc[smart contract upgrade]."
+				},
+				"eip712Domain()": {
+					"details": "See {IERC-5267}."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@openzeppelin/contracts@5.0.1/utils/cryptography/EIP712.sol": "EIP712"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@openzeppelin/contracts@5.0.1/interfaces/IERC5267.sol": {
+			"keccak256": "0x0969cfef296b159efa5606c0afd18b3a133357d1daa39025a1296dff80100064",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3cd6c1133faf44455cbcd6ec2cacd308ec9416dd7dd6af36ca72671fdccb8b81",
+				"dweb:/ipfs/QmUJDa6qk4dR9oM77kYTmiJqz3iRvsnJ7esvAFBoD2FWbv"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts@5.0.1/utils/ShortStrings.sol": {
+			"keccak256": "0x0d3ca9b9867fd37c6da65581d41ef96ac9fe7d10bb22f6daaecfe44916c7a453",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f3f96f857f0cc26ebd7ba2f030ed97795fb5800e8f7b0ab11783454c08ba6623",
+				"dweb:/ipfs/QmdEeETLCFWvzzmsSqjGoquZFv5MENQ4aTbBmFVd5BKrvQ"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts@5.0.1/utils/StorageSlot.sol": {
+			"keccak256": "0x5cb657b4b43024c45fa651f71df120d7557806672fe77d1169d507cff9c75d25",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3c8c113a9d10ef9978f4069c45914f2579d0ffa252d09fe02a6d984cf9fbf65f",
+				"dweb:/ipfs/QmZfFh5P7FHy6W9g313P8Ermknnhyvj9gY3Fqpa7Q5EPmy"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts@5.0.1/utils/Strings.sol": {
+			"keccak256": "0xca7753152a136f20f6637889e5df17cd8e966d144b83db5ab98d6f76b92ce2c8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f18d05c7ca759c66a988a07f7837920afa9aa6bfed03b579e8b9376451165d7a",
+				"dweb:/ipfs/QmXfWMqzWxguszY5pc9cmdwUvCXzNmmEEs3RWp8PBQexRn"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts@5.0.1/utils/cryptography/EIP712.sol": {
+			"keccak256": "0xf980394f660e66d455172292c55b487fa1010f788a4e0a056c1bb4d86136d3cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://523cfcda048702af4b8b3ba9f9644bd9f47d047fd15754b0b00c2537433f317d",
+				"dweb:/ipfs/QmcReJhiSJkDneX2LF8FF8xYp2WnTEdsn6VDhDJwETCybd"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts@5.0.1/utils/cryptography/MessageHashUtils.sol": {
+			"keccak256": "0x094b711ead8eca981a878201cd32f26d8caef2aa0ff58f08af85e81f1b74787b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1eae21a836fc5a15a9515c6a1ffb97b8bc8e81d365da79cded5872a9864cc205",
+				"dweb:/ipfs/QmVTDovHMHq7JmLoBq9MMwzbnWzm1BisRFR3AyHbxwFKCn"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts@5.0.1/utils/math/Math.sol": {
+			"keccak256": "0xc74faa0560a7f795c14e648af89ce36a66a0b9e392eff4990df3e26f9ad76066",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6fa0111cd2a1773122d108661fef1a65c1d69398950b689ac07b3c2689657609",
+				"dweb:/ipfs/QmU7g9prfz8n33i4XaUeLFnyjMog4496vnjhiTCr2rxWiT"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts@5.0.1/utils/math/SignedMath.sol": {
+			"keccak256": "0x195a987e7051cec45f53c5004e819f260178914c1784ddeae601c517de8e133b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3bab66e84f7e5944d6b249146896ab34d8f756a7fb1a1fa08ca20ffa2c48adc9",
+				"dweb:/ipfs/QmWBtZ1DatXRaxSGTJ2Y9i8HNH362eeBanP4TfKGKW5xYB"
+			]
+		}
+	},
+	"version": 1
+}

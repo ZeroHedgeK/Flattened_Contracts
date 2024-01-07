@@ -1,0 +1,116 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentAllowance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "requestedDecrease",
+						"type": "uint256"
+					}
+				],
+				"name": "SafeERC20FailedDecreaseAllowance",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "SafeERC20FailedOperation",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "Wrappers around ERC20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using SafeERC20 for IERC20;` statement to your contract, which allows you to call the safe operations as `token.safeTransfer(...)`, etc.",
+			"errors": {
+				"SafeERC20FailedDecreaseAllowance(address,uint256,uint256)": [
+					{
+						"details": "Indicates a failed `decreaseAllowance` request."
+					}
+				],
+				"SafeERC20FailedOperation(address)": [
+					{
+						"details": "An operation with an ERC20 token failed."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"title": "SafeERC20",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": "SafeERC20"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x4ce6e9f30dba5ae30f26321dc851b669caf3f953f8c832304d05df2a523f1af3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://eb24de66bbfa42093a20d448cb2564655525cba0342035a42a37654e5d922deb",
+				"dweb:/ipfs/QmYgnFHamrgy5qurrxVLR1qDb7MirvGEoxCVwqiF1YvDMf"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+			"keccak256": "0xbd95aa069a733f631cd9270c91068fa4b23e3744bdaee7725311c149e85a73f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e8ebfd825fdce0f8667868f71a3b61619416894e6bb9d51478a54a6a4d83fddc",
+				"dweb:/ipfs/QmSAnKSxYEHj7uUebzXBPTsTUfnsbqaZXWb48yxJzMbr4m"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+			"keccak256": "0x69d0e26c2cc522ff8c79ebb39d9ebfed17fcbf618011dd1ecb1e836319a22dc6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://65c78789ba8cc31902827165fb4d2228b5d02b29af14318ac36218b811d589bc",
+				"dweb:/ipfs/QmZqnytXkqactXV4Aac8MoHuUphLqNxPqrNWZsKk8bfToY"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0x2d0e02a64f0f996274305413c595b882575f0b55e5ace83ab4c24bcd6b75e2c3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://757535b020168c00ed3555fdc99aa969a1082550f16b7d9a949027abdcfe1ca4",
+				"dweb:/ipfs/QmUEbsyvX3BfS2qrocYdZRRc8p3H7zrMES16NBpe7iBbeC"
+			]
+		}
+	},
+	"version": 1
+}
